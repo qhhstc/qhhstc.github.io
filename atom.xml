@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-25T02:52:55.000Z</updated>
+  <updated>2016-03-25T12:23:06.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,15 +16,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>github pages从无到所有</title>
-    <link href="http://yoursite.com/2016/03/25/github-pages%E4%BB%8E%E6%97%A0%E5%88%B0%E6%89%80%E6%9C%89/"/>
-    <id>http://yoursite.com/2016/03/25/github-pages从无到所有/</id>
+    <title>GitHub Pages从无到所有</title>
+    <link href="http://yoursite.com/2016/03/25/%E7%94%A8HEXO,GitHub,NEXT%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%B0%8F%E7%99%BD%E7%89%88%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/</id>
     <published>2016-03-25T02:51:24.000Z</published>
-    <updated>2016-03-25T02:52:55.000Z</updated>
+    <updated>2016-03-25T12:23:06.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;　　作为一个初级iOS开发者，看了很多大牛的博客，先不说博客的内容多吸引我，网站本身对我产生了巨大的诱惑。于是各种找资料，在阿里云买服务器（这里有个坑，服务器可以通过转发微博获取两年的免费版）域名，备案。在备案的漫长时间里，撸主发现了居然GitHub也能搭博客，真是蠢得一b。然后就有了下文。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;你需要的&quot;&gt;&lt;a href=&quot;#你需要的&quot; class=&quot;headerlink&quot; title=&quot;你需要的&quot;&gt;&lt;/a&gt;你需要的&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;一台Mac电脑（推测windows应该相差不大）&lt;/li&gt;
+&lt;li&gt;你的五指姑娘 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步骤&lt;/h1&gt;&lt;h4 id=&quot;安装Node-两种方式&quot;&gt;&lt;a href=&quot;#安装Node-两种方式&quot; class=&quot;headerlink&quot; title=&quot;安装Node(两种方式)&quot;&gt;&lt;/a&gt;安装Node(两种方式)&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;直接去&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网&lt;/a&gt;下载，然后balabala&lt;/li&gt;
+&lt;li&gt;先安装&lt;a href=&quot;http://brew.sh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HomeBrew&lt;/a&gt;(这个网站有时大姨妈）,然后终端输入brew install node&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;GitHub账号&quot;&gt;&lt;a href=&quot;#GitHub账号&quot; class=&quot;headerlink&quot; title=&quot;GitHub账号&quot;&gt;&lt;/a&gt;GitHub账号&lt;/h4&gt;&lt;p&gt;这个应该都有了吧，没有就点&lt;a href=&quot;http://jingyan.baidu.com/article/455a9950abe0ada167277864.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;安装HEXO&quot;&gt;&lt;a href=&quot;#安装HEXO&quot; class=&quot;headerlink&quot; title=&quot;安装HEXO,&quot;&gt;&lt;/a&gt;安装HEXO,&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;打开你的终端,输入 nam install -g hexo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-0ffaf6ffd9684dcd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;MZK`4KCRLUNC{K23J7M0NTD.jpg&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;桌面新建一个hexo文件，终端进入目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-581403d1ba0c2e65.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;N(HBPE)_)N6ZNMH0IQUT`R8.jpg&quot;&gt;成功是这样的&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-44bc7a69ef24e77a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;~{)8F2F0]0W(CAJ{D6C{MML.jpg&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;建博客的源项目&quot;&gt;&lt;a href=&quot;#建博客的源项目&quot; class=&quot;headerlink&quot; title=&quot;建博客的源项目&quot;&gt;&lt;/a&gt;建博客的源项目&lt;/h4&gt;&lt;p&gt;打开你的&lt;a href=&quot;https://github.com/qhhstc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;,创建一个项目，然后，比如你的id是 qhhstc呢 就这么填写项目名字 qhhstc.github.io，成功后点击这个按钮&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-8b61a10ce3d3fa95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;E464F55A-1703-4267-8B3B-5F1518A50662.png&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;配置博客&quot;&gt;&lt;a href=&quot;#配置博客&quot; class=&quot;headerlink&quot; title=&quot;配置博客&quot;&gt;&lt;/a&gt;配置博客&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;打开hexo文件，点击下图中的_config.yml站点配置文件&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-95a2c04ed1c80c90.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;9UNB$A0O%XM{F$O4S8``9UR.jpg&quot;&gt;&lt;/li&gt;
+&lt;li&gt;如下修改其中内容，与你的GitHub关联&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-63d5903eb7defc40.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Z6EDXCIR)CXFLP3JJI9Y1{O.jpg&quot;&gt;后面文件如果有打不开的，请下载&lt;a href=&quot;http://www.sublimetext.com/3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;sublime text3&lt;/a&gt;，撸主用的就是这个，有很多插件特别好用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生成pub，再打开你的终端&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-9f33c404206774c9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;3$BEH2FBWPN19}R]{~YB%}A.jpg&quot;&gt;基本情况是这样子，同学们把那几个我自己输入的换成你们的就可以了，比如”qhhstc”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;添加SSH，进入GitHub，点击自己资料，进入添加SSH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-6a890f66c2d0d29e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;IXQZ13X`6{U_P4J%Z7TQTOD.jpg&quot;&gt;然后，擦，竟然报错了，没事 撸主主要是让你看看奇葩的信息&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-3b12342522b0fecb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;FZV2`YPSWZCLH05E(4}81YP.jpg&quot;&gt;刘亦菲？？？&lt;br&gt;正确姿势是：打开上步生成的qhhstc.pub文件，复制里面的内容，然后粘贴到上上图中的Key里，成功后可以检验一下&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-bbe28d92427f57a3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;R`36)~3NW%GGR~WW1IS5@Z0.jpg&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;部署指令&quot;&gt;&lt;a href=&quot;#部署指令&quot; class=&quot;headerlink&quot; title=&quot;部署指令&quot;&gt;&lt;/a&gt;部署指令&lt;/h4&gt;&lt;p&gt;直接上图，以后每次修改文件都是这样部署&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-bd2e3a6be9fdfefc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;MO]RWK2BI`@1W}I6Y4W7EG8.jpg&quot;&gt;这时候报错了&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-816ed012ce5c2666.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;F_WIR5W9A~B@(2GRLZHHB9U.jpg&quot;&gt;据说是git更新3.0后的问题，怎么解决呢&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1156511-6595b0d36093ce98.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;
+![HF`UCN%BS1V%RHDA60JPEWT.jpg](http://upload-images.jianshu.io/upload_images/1156511-8fc56ee3e5adb4dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)]TM_B0K{`T.jpg&quot;&gt;这样就是完成拉，hexo指令可以简写，具体&lt;a href=&quot;https://segmentfault.com/a/1190000002632530&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;看这里&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;使用NEXT主题&quot;&gt;&lt;a href=&quot;#使用NEXT主题&quot; class=&quot;headerlink&quot; title=&quot;使用NEXT主题&quot;&gt;&lt;/a&gt;使用NEXT主题&lt;/h4&gt;&lt;p&gt;  当然，还有很多好看的主题，个人比较喜欢这么好看又好用的，&lt;a href=&quot;http://theme-next.iissnan.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NEXT&lt;/a&gt;网站，这个教程十分详细，详细到我这个小白都做好了，还有扩展的话，可以看这个大神的&lt;a href=&quot;http://www.arao.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;博客&lt;/a&gt;, 后面修改有些繁琐没有截图，看官老爷们具体问题具体问，可以在&lt;a href=&quot;http://godqiu.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;留言&lt;/p&gt;
+&lt;h4 id=&quot;写文章&quot;&gt;&lt;a href=&quot;#写文章&quot; class=&quot;headerlink&quot; title=&quot;写文章&quot;&gt;&lt;/a&gt;写文章&lt;/h4&gt;&lt;p&gt;网上推荐的很多，个人是在用简书上的markdown编辑器，&lt;a href=&quot;http://www.jianshu.com/p/q81RER&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;markdown&lt;/a&gt;的简单用法, 写完再继续研究怎么发布&lt;/p&gt;
+&lt;h4 id=&quot;结&quot;&gt;&lt;a href=&quot;#结&quot; class=&quot;headerlink&quot; title=&quot;结&quot;&gt;&lt;/a&gt;结&lt;/h4&gt;&lt;p&gt;今天的直播就到这里了，喜欢的朋友可以点一下右上角的订阅&lt;/p&gt;
+</content>
     
     <summary type="html">
+    
+      &lt;p&gt;　　作为一个初级iOS开发者，看了很多大牛的博客，先不说博客的内容多吸引我，网站本身对我产生了巨大的诱惑。于是各种找资料，在阿里云买服务器（这里有个坑，服务器可以通过转发微博获取两年的免费版）域名，备案。在备案的漫长时间里，撸主发现了居然GitHub也能搭博客，真是蠢得一b。然后就有了下文。&lt;br&gt;
     
     </summary>
     
