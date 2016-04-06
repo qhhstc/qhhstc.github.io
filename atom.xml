@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-01T03:09:38.000Z</updated>
+  <updated>2016-04-06T06:16:33.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/25/%E7%94%A8HEXO,GitHub,NEXT%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%B0%8F%E7%99%BD%E7%89%88%EF%BC%89/"/>
     <id>http://yoursite.com/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/</id>
     <published>2016-03-25T02:51:24.000Z</published>
-    <updated>2016-04-01T03:09:38.000Z</updated>
+    <updated>2016-04-06T06:16:33.000Z</updated>
     
     <content type="html">&lt;p&gt;　　作为一个初级iOS开发者，看了很多大牛的博客，先不说博客的内容多吸引我，网站本身对我产生了巨大的诱惑。于是各种找资料，在阿里云买服务器（这里有个坑，服务器可以通过转发微博获取两年的免费版）域名，备案。在备案的漫长时间里，撸主发现了居然GitHub也能搭博客，真是蠢得一b。然后就有了下文。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;你需要的&quot;&gt;&lt;a href=&quot;#你需要的&quot; class=&quot;headerlink&quot; title=&quot;你需要的&quot;&gt;&lt;/a&gt;你需要的&lt;/h1&gt;&lt;ol&gt;
@@ -58,7 +58,6 @@
 &lt;h4 id=&quot;使用NEXT主题&quot;&gt;&lt;a href=&quot;#使用NEXT主题&quot; class=&quot;headerlink&quot; title=&quot;使用NEXT主题&quot;&gt;&lt;/a&gt;使用NEXT主题&lt;/h4&gt;&lt;p&gt;  当然，还有很多好看的主题，个人比较喜欢这么好看又好用的，&lt;a href=&quot;http://theme-next.iissnan.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NEXT&lt;/a&gt;网站，这个教程十分详细，详细到我这个小白都做好了，还有扩展的话，可以看这个大神的&lt;a href=&quot;http://www.arao.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;博客&lt;/a&gt;, 后面修改有些繁琐没有截图，看官老爷们具体问题具体问，可以在&lt;a href=&quot;http://godqiu.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;留言&lt;/p&gt;
 &lt;h4 id=&quot;写文章&quot;&gt;&lt;a href=&quot;#写文章&quot; class=&quot;headerlink&quot; title=&quot;写文章&quot;&gt;&lt;/a&gt;写文章&lt;/h4&gt;&lt;p&gt;网上推荐的很多，个人是在用简书上的markdown编辑器，&lt;a href=&quot;http://www.jianshu.com/p/q81RER&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;markdown&lt;/a&gt;的简单用法, 写完再继续研究怎么发布&lt;/p&gt;
 &lt;h4 id=&quot;结&quot;&gt;&lt;a href=&quot;#结&quot; class=&quot;headerlink&quot; title=&quot;结&quot;&gt;&lt;/a&gt;结&lt;/h4&gt;&lt;p&gt;今天的直播就到这里了，喜欢的朋友可以点一下右上角的订阅&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;ds-thread-count&quot; data-thread-key=&quot;page1&quot; data-count-type=&quot;comments&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
