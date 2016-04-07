@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://godqiu.cn/"/>
   <updated>2016-04-06T07:35:10.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://godqiu.cn/</id>
   
   <author>
     <name>Big Dreamer</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>用HEXO,GitHub,NEXT搭建博客</title>
-    <link href="http://yoursite.com/2016/03/25/%E7%94%A8HEXO,GitHub,NEXT%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%B0%8F%E7%99%BD%E7%89%88%EF%BC%89/"/>
-    <id>http://yoursite.com/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/</id>
+    <link href="http://godqiu.cn/2016/03/25/%E7%94%A8HEXO,GitHub,NEXT%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E5%B0%8F%E7%99%BD%E7%89%88%EF%BC%89/"/>
+    <id>http://godqiu.cn/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/</id>
     <published>2016-03-25T02:51:24.000Z</published>
     <updated>2016-04-06T07:35:10.000Z</updated>
     
@@ -67,7 +67,7 @@
     </summary>
     
     
-      <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
+      <category term="HEXO" scheme="http://godqiu.cn/tags/HEXO/"/>
     
   </entry>
   
