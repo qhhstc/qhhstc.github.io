@@ -65,7 +65,7 @@
 
 
 
-  <title> 归档 | Qhh's BLOG </title>
+  <title> Qhh's BLOG </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -86,7 +86,9 @@
 
 
 
-  <div class="container one-column  page-archive ">
+  <div class="container one-column 
+   page-home 
+">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -193,67 +195,99 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  
+  
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 1 篇日志。 继续努力。
-    </span>
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
 
-      
-      
-      
-
-      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/" itemprop="url">
+                  用HEXO,GitHub,NEXT搭建博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-25T10:51:24+08:00" content="2016-03-25">
+              2016-03-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/#comments" itemprop="discussionUrl">
+  
+                  <span class="post-comments-count ds-comment-count" data-ds-identifier="2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/" itemprop="commentsCount"> </span>
+                </a>
+              </span>
+            
+          
+
+          
+      
+         <span id="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/"class="leancloud_visitors"  data-flag-title="用HEXO,GitHub,NEXT搭建博客">
+            &nbsp; 阅读次数
+            </span>
+          
         </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
       
       
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/" itemprop="url">
-              
-                <span itemprop="name">用HEXO,GitHub,NEXT搭建博客</span>
-              
+          <p>　　作为一个初级iOS开发者，看了很多大牛的博客，先不说博客的内容多吸引我，网站本身对我产生了巨大的诱惑。于是各种找资料，在阿里云买服务器（这里有个坑，服务器可以通过转发微博获取两年的免费版）域名，备案。在备案的漫长时间里，撸主发现了居然GitHub也能搭博客，真是蠢得一b。然后就有了下文。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/#more" rel="contents">
+              阅读全文 &raquo;
             </a>
+          </div>
         
-      </h1>
+      
+    </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-03-25T10:51:24+08:00"
-              content="2016-03-25" >
-          03-25
-        </time>
-      </div>
+    <footer class="post-footer">
+      
 
-    </header>
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </article>
 
 
-
     
-
   </section>
 
   
-
 
  </div>
 
@@ -386,12 +420,6 @@
   
   
   
-    <script type="text/javascript">
-      postMotionOptions = {stagger: 100, drag: true};
-    </script>
-  
-
-  
     
 
   
@@ -438,12 +466,6 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   <script type="text/javascript">
     $(document).ready(function () {
