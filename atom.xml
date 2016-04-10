@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://godqiu.cn/"/>
-  <updated>2016-04-06T07:35:10.000Z</updated>
+  <updated>2016-04-10T14:20:19.000Z</updated>
   <id>http://godqiu.cn/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些吐槽和需要做的</title>
+    <link href="http://godqiu.cn/2016/04/10/%E4%B8%80%E4%BA%9B%E5%90%90%E6%A7%BD%E5%92%8C%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84/"/>
+    <id>http://godqiu.cn/2016/04/10/一些吐槽和需要做的/</id>
+    <published>2016-04-10T14:16:33.000Z</published>
+    <updated>2016-04-10T14:20:19.000Z</updated>
+    
+    <content type="html">&lt;pre&gt;&lt;code&gt;距离上次写这种东西已经很多年了，大约是在ＱＱ空间时代，时不时的发点无病呻吟的东西。暗恋的女生最后还是没说，游戏也没玩到最好，蹉跎掉的岁月确实已经过去了，最重要的是现在。
+&lt;/code&gt;&lt;/pre&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;毕业设计&quot;&gt;&lt;a href=&quot;#毕业设计&quot; class=&quot;headerlink&quot; title=&quot;毕业设计&quot;&gt;&lt;/a&gt;毕业设计&lt;/h2&gt;&lt;p&gt;原来大学已经快结束了，毕业设计也算草草做完，可能是做的有点简单 还是担心过不了，也要吐槽下，既然嫌简单，还出这么简单的题目，已经加了这么多了，TTTTT&lt;/p&gt;
+&lt;h2 id=&quot;工作&quot;&gt;&lt;a href=&quot;#工作&quot; class=&quot;headerlink&quot; title=&quot;工作&quot;&gt;&lt;/a&gt;工作&lt;/h2&gt;&lt;p&gt;海投了各个平台，原以为会挺好完成的事，结果是血崩。吐槽一下，我们面试者层次不齐，好多公司其实也是。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一家公司，进了一间灯一直在闪烁的会议室一边听着业务员推销业务一边看介绍等了半小时，面试官影子都没，请问是找人的吗？？？？&lt;/li&gt;
+&lt;li&gt;第二家等了半个多小时，来了两个面试官，态度特别差，自己确实在c++方面比较薄弱，但也不用这样瞧不起人吧。&lt;/li&gt;
+&lt;li&gt;第三家无语，先是做了份笔试题，有点难，好多都不知道，然后来了三个人，其中的技术主管看了笔试题和项目，一直在给我挑错，说着 这是他们公司调查了20多家公司得出的iOS最基本的题目，如果这都不会也太差了，当时的我是崩溃的。后来就一直引诱我要不要去他们公司培训，草，老子两个多小时才领悟过来，回到寝室后百度了下笔试题，原来是喵神写的iOS Leader需要会的十个面试题，我靠，真是服了这种流氓公司了，要是知道当场打脸。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;人挑公司，公司也在挑人，通过面试也知道自己在哪些有不足，需要好好改进，不能好高骛远。&lt;/p&gt;
+&lt;h2 id=&quot;学习方面&quot;&gt;&lt;a href=&quot;#学习方面&quot; class=&quot;headerlink&quot; title=&quot;学习方面&quot;&gt;&lt;/a&gt;学习方面&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;基础不够扎实，一些东西看过就忘了，可能知道是什么，但是原理不清楚&lt;/li&gt;
+&lt;li&gt;见识比较少，一些好的用法写法不清楚&lt;/li&gt;
+&lt;li&gt;没有自己的亮点，可以拿得出手说是自己独一无二的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;路还很长啊。&lt;/p&gt;
+&lt;h1 id=&quot;最后&quot;&gt;&lt;a href=&quot;#最后&quot; class=&quot;headerlink&quot; title=&quot;最后&quot;&gt;&lt;/a&gt;最后&lt;/h1&gt;&lt;p&gt;希望自己可以好好的做成一件事，可以很装逼的跟朋友们说，希望爷爷奶奶身体一直好，希望现在的朋友是一直的朋友&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;pre&gt;&lt;code&gt;距离上次写这种东西已经很多年了，大约是在ＱＱ空间时代，时不时的发点无病呻吟的东西。暗恋的女生最后还是没说，游戏也没玩到最好，蹉跎掉的岁月确实已经过去了，最重要的是现在。
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="吐槽" scheme="http://godqiu.cn/tags/%E5%90%90%E6%A7%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>用HEXO,GitHub,NEXT搭建博客</title>
