@@ -34,7 +34,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -45,15 +45,16 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Qhh's BLOG">
-<meta property="og:url" content="http://godqiu.cn/index.html">
+<meta name="description" content="每个不成熟的开发者都有这样的场景，知道某个知识点 实际应用的时候，必须打开百度Google才能完成，比如iOS中的本地操作，每次都要翻过。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS学习文件操作">
+<meta property="og:url" content="http://godqiu.cn/2016/04/17/iOS学习文件操作/index.html">
 <meta property="og:site_name" content="Qhh's BLOG">
-<meta property="og:description">
+<meta property="og:description" content="每个不成熟的开发者都有这样的场景，知道某个知识点 实际应用的时候，必须打开百度Google才能完成，比如iOS中的本地操作，每次都要翻过。">
+<meta property="og:updated_time" content="2016-04-17T15:35:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qhh's BLOG">
-<meta name="twitter:description">
+<meta name="twitter:title" content="iOS学习文件操作">
+<meta name="twitter:description" content="每个不成熟的开发者都有这样的场景，知道某个知识点 实际应用的时候，必须打开百度Google才能完成，比如iOS中的本地操作，每次都要翻过。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -65,7 +66,7 @@
 
 
 
-  <title> Qhh's BLOG </title>
+  <title> iOS学习文件操作 | Qhh's BLOG </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -86,9 +87,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -195,9 +194,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -213,9 +212,7 @@
             
             
               
-                <a class="post-title-link" href="/2016/04/17/iOS学习文件操作/" itemprop="url">
-                  iOS学习文件操作
-                </a>
+                iOS学习文件操作
               
             
           </h1>
@@ -260,215 +257,112 @@
       
 
       
-        
-          <p>每个不成熟的开发者都有这样的场景，知道某个知识点 实际应用的时候，必须打开百度Google才能完成，比如iOS中的本地操作，每次都要翻过。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/17/iOS学习文件操作/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <span itemprop="articleBody"><p>每个不成熟的开发者都有这样的场景，知道某个知识点 实际应用的时候，必须打开百度Google才能完成，比如iOS中的本地操作，每次都要翻过。<br><a id="more"></a></p>
+<h2 id="iOS沙盒机制"><a href="#iOS沙盒机制" class="headerlink" title="iOS沙盒机制"></a>iOS沙盒机制</h2><p>1.介绍</p>
+<blockquote>
+<p>沙盒：在受限的安全环境中运行应用程序的一种做法，这种做法是要限制授予应用程序的代码访问权限。</p>
+</blockquote>
+<p>iOS正是这样的沙盒机制，也就是说每个iOS程序<strong>只能</strong>在为该程序创建的<strong>文件系统</strong>中读取文件，例如一些图片声音等。</p>
+<p>2.沙盒目录<br>iOS模拟器的文件在mac上是隐藏的，通过打印路径也能找到，我们需要在终端做一点操作。<br>显示文件：</p>
+<p>defaults write com.apple.finder AppleShowAllFiles -bool true<br>隐藏文件：</p>
+<p>defaults write com.apple.finder AppleShowAllFiles -bool false<br>然后退出终端，重新启动Finder。<br>Xcode6以前的模拟器目录是这样的</p>
+<p>/Users/username/Library/Application Support/iPhone Simulator/<br>现在的目录做了改变</p>
+<p>/Users/your name/Library/Developer/CoreSimulator/Devices/your number/data/Containers/Data/Application/</p>
+<p>默认情况下，每个沙盒含有3个文件夹：Documents, Library 和 tmp。因为应用的沙盒机制，应用只能在几个目录下读写文件</p>
+<ul>
+<li>Documents：苹果建议将程序中建立的或在程序中浏览到的文件数据保存在该目录下，iTunes备份和恢复的时候会包括此目录</li>
+<li>Library：存储程序的默认设置或其它状态信息；</li>
+<li>Library/Caches：存放缓存文件，iTunes不会备份此目录，此目录下文件不会在应用退出删除</li>
+<li>tmp：提供一个即时创建临时文件的地方。</li>
+<li>iTunes在与iPhone同步时，备份所有的Documents和Library文件。</li>
+<li>iPhone在重启时，会丢弃所有的tmp文件</li>
+</ul>
+<h2 id="具体文件操作"><a href="#具体文件操作" class="headerlink" title="具体文件操作"></a>具体文件操作</h2><p>获取程序的Home目录</p>
+<p>NSString *homeDirectory = NSHomeDirectory();<br>NSLog(@”path:%@”, homeDirectory);<br>获取document，cache，library等目录</p>
+<p>NSArray <em>paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);<br>NSString </em>path = [paths objectAtIndex:0];<br>将方法中<strong>NSDocumentDirectory</strong>替换即可<br>这是一个枚举，里面有各种搜索路径</p>
+<p>typedef NS_ENUM(NSUInteger, NSSearchPathDirectory)<br>我们可以借助这个做一些简单的应用，比如图片的存取</p>
+<p>NSArray <em>array = [[NSArray alloc] initWithObjects:@”hello”,nil];<br>NSString </em>filePath = [homeDirectory stringByAppendingPathComponent:@”Pictures”];<br>[array writeToFile:filePath atomically:YES];<br>然后就可以通过<strong>NSPicturesDirectory</strong>的路径打印出来了</p>
+<p>NSArray *data = [[NSArray alloc]initWithContentsOfFile:filePath];<br>NSLog(@”%@”, data);</p>
+<h2 id="NSFileManager"><a href="#NSFileManager" class="headerlink" title="NSFileManager"></a>NSFileManager</h2><p>官方给文件操作封装的处理类</p>
+<blockquote>
+<p>An NSFileManager object lets you examine the contents of the file system and make changes to it.</p>
+</blockquote>
+<p>首先创建fileManager</p>
+<p>NSFileManager *fileManager = [NSFileManager defaultManager];<br>上文中创建Pictures，在这里我们就可以用另一种方法</p>
+<p>[fileManager createFileAtPath:filePath contents:[string  dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];</p>
+<p>文件管理这个类有很多很多用法，撸主无法一一列出，具体可以直接去看官方文档，很详细，用处也一目了然。<a href="http://www.cnblogs.com/pengyingh/articles/2350345.html" target="_blank" rel="external">这里</a>有一些用法可以看看。</p>
+</span>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2016/04/10/一些吐槽和需要做的/" itemprop="url">
-                  一些吐槽和需要做的
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-04-10T22:16:33+08:00" content="2016-04-10">
-              2016-04-10
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/10/一些吐槽和需要做的/#comments" itemprop="discussionUrl">
-  
-                  <span class="post-comments-count ds-comment-count" data-ds-identifier="2016/04/10/一些吐槽和需要做的/" itemprop="commentsCount"> </span>
-                </a>
-              </span>
-            
-          
-
-          
-      
-         <span id="/2016/04/10/一些吐槽和需要做的/"class="leancloud_visitors"  data-flag-title="一些吐槽和需要做的">
-            &nbsp; 阅读次数
-            </span>
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <p>距离上次写这种东西已经很多年了，大约是在ＱＱ空间时代，时不时的发点无病呻吟的东西。暗恋的女生最后还是没说，游戏也没玩到最好，蹉跎掉的岁月确实已经过去了，最重要的是现在。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/10/一些吐槽和需要做的/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/10/一些吐槽和需要做的/" rel="next" title="一些吐槽和需要做的">
+                <i class="fa fa-chevron-left"></i> 一些吐槽和需要做的
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                <a class="post-title-link" href="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/" itemprop="url">
-                  用HEXO,GitHub,NEXT搭建博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-03-25T10:51:24+08:00" content="2016-03-25">
-              2016-03-25
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/#comments" itemprop="discussionUrl">
-  
-                  <span class="post-comments-count ds-comment-count" data-ds-identifier="2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/" itemprop="commentsCount"> </span>
-                </a>
-              </span>
-            
-          
-
-          
-      
-         <span id="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/"class="leancloud_visitors"  data-flag-title="用HEXO,GitHub,NEXT搭建博客">
-            &nbsp; 阅读次数
-            </span>
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <p>　　作为一个初级iOS开发者，看了很多大牛的博客，先不说博客的内容多吸引我，网站本身对我产生了巨大的诱惑。于是各种找资料，在阿里云买服务器（这里有个坑，服务器可以通过转发微博获取两年的免费版）域名，备案。在备案的漫长时间里，撸主发现了居然GitHub也能搭博客，真是蠢得一b。然后就有了下文。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/25/用HEXO,GitHub,NEXT搭建博客（小白版）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/17/iOS学习文件操作/"
+     data-title="iOS学习文件操作"
+     data-content=""
+     data-url="http://godqiu.cn/2016/04/17/iOS学习文件操作/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
  </div>
 
         
 
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2016/04/17/iOS学习文件操作/"
+                   data-title="iOS学习文件操作" data-url="http://godqiu.cn/2016/04/17/iOS学习文件操作/">
+              </div>
+            
+          </div>
         
       </div>
 
@@ -489,8 +383,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="/images/avatar.jpeg" alt="Big Dreamer" itemprop="image"/>
           <p class="site-author-name" itemprop="name">Big Dreamer</p>
@@ -553,6 +456,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS沙盒机制"><span class="nav-number">1.</span> <span class="nav-text">iOS沙盒机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体文件操作"><span class="nav-number">2.</span> <span class="nav-text">具体文件操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NSFileManager"><span class="nav-number">3.</span> <span class="nav-text">NSFileManager</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
       
 
     </div>
@@ -641,6 +555,165 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
